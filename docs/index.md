@@ -9,4 +9,4 @@ Each project follows a professional structure with reproducible environments, do
 
 Projects index:
 
-- [**Final: Title Here**](final/README.md)
+- [**Final: Regression Analysis**](final/README.md)

@@ -2,8 +2,8 @@
 # Configuration file for MkDocs (Automated project documentation generator)
 
 site_name: Applied ML Project
-site_url:
-repo_url:
+site_url: https://ssowers2.github.io/applied-ml-sowers/
+repo_url: https://github.com/ssowers2/ml_regression_sowers
 site_description: Professional applied ML project
 site_author: Sabriya Sowers
 docs_dir: docs
