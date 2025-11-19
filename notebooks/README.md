@@ -14,7 +14,7 @@ The workflow includes:
 
 The project demonstrates how regression supports **forecasting**, **population health analysis**, and **cost-related decision-making**.
 
-[My Regression Notebooks](https://github.com/ssowers2/ml_regression_sowers/tree/main/notebooks)
+[My Regression Notebook](https://github.com/ssowers2/ml_regression_sowers/tree/main/notebooks/final/regression_sowers.ipynb)
 [Peer Review](https://github.com/ssowers2/ml_regression_sowers/blob/main/notebooks/peer_review.md)
 
 ---
