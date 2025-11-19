@@ -1,16 +1,11 @@
 # mkdocs.yml
 # Configuration file for MkDocs (Automated project documentation generator)
 
-# TODO: Change denisecase to your GitHub username (use CTRL F to find all instances)
-# TODO: Change applied-ml-template to your repository name (use CTRL F to find all instances)
-# TODO: Update site_description
-# TODO: Update site_author
-
 site_name: Applied ML Project
-site_url: https://denisecase.github.io/applied-ml-template/
-repo_url: https://github.com/denisecase/applied-ml-template
+site_url:
+repo_url:
 site_description: Professional applied ML project
-site_author: Denise Case
+site_author: Sabriya Sowers
 docs_dir: docs
 site_dir: site
 
@@ -64,12 +59,5 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Project 01:
-      - Overview: project01/README.md
-      - Example Analysis: project01/EXAMPLE_ANALYSIS.md
-  - Project 02:
-      - Overview: project02/README.md
-  - Project 03:
-      - Overview: project03/README.md
-  - Project 04:
-      - Overview: project04/README.md
+  - Final:
+      - Overview: final/README.md
