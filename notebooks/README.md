@@ -14,6 +14,8 @@ The workflow includes:
 
 The project demonstrates how regression supports **forecasting**, **population health analysis**, and **cost-related decision-making**.
 
+Notebook Link: https://github.com/ssowers2/ml_regression_sowers/tree/main/notebooks
+
 ---
 
 ## Section 1: Import and Inspect the Data
