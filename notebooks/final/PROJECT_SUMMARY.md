@@ -2,7 +2,7 @@
 ### Regression Modeling of Medical Insurance Costs  
 **Author:** Sabriya Sowers  
 
-This document summarizes the key decisions, assumptions, and findings for this regression project using the Medical Costs dataset.
+This document summarizes the key decisions, assumptions, and findings for my regression project using the Medical Costs dataset.
 
 ---
 
@@ -11,7 +11,7 @@ This document summarizes the key decisions, assumptions, and findings for this r
 Can medical insurance charges be predicted based on demographic and health-related variables?
 
 **Purpose of the Model:**  
-To explore how factors like age, BMI, and smoking status influence medical costs and to build a regression model that estimates total charges.
+To understand how features like age, BMI, and smoking status influence medical costs and to build a regression model that estimates total charges.
 
 **Intended Users:**  
 Students, analysts, or anyone learning regression modeling techniques.
@@ -21,109 +21,100 @@ Students, analysts, or anyone learning regression modeling techniques.
 ## **2. Target Variable**
 **Target variable name:** `charges`  
 **Type:** Continuous (regression)  
-**Description:** Total medical insurance cost for an individual.
+**Description:** Total medical insurance cost for each individual.
 
 ---
 
 ## **3. Features Used**
-I selected **three features** based on exploratory analysis:
+I selected **three features** based on what I found during exploratory analysis:
 
 - `age`
 - `bmi`
-- `smoker_num` (encoded from yes/no → 1/0)
+- `smoker_num` (encoded from the `smoker` column)
 
-These were chosen because they showed the strongest relationship with the target variable.
+These showed the strongest relationship with the target variable.
 
 ---
 
 ## **4. Feature Engineering**
 - Encoded `smoker` into a numeric variable (`smoker_num` = 1 for yes, 0 for no).
-- No additional new features were created.
+- No new features were created.
 - No features were removed.
-- Data had no missing values, so no cleaning was required.
+- The dataset had no missing values, so no cleaning was needed.
 
 ---
 
 ## **5. Data Exploration Summary**
-**Findings:**
+**Key Findings:**
 - `charges` is highly right-skewed with many high-cost outliers.  
-- Smokers show dramatically higher charges compared to non-smokers.  
-- BMI and age both show visible upward trends with charges.  
-- Kid counts (`children`) and regions are fairly balanced.  
-- No invalid or impossible values were detected.
+- Smokers show dramatically higher medical costs compared to non-smokers.  
+- Age and BMI both trend upward with charges.  
+- Regions and number of children are fairly balanced.  
+- No invalid or impossible values were found.
 
 ---
 
 ## **6. Modeling Approach**
 **Models Trained:**
-1. **Linear Regression**
-2. **Polynomial Regression (Degree = 3)** using a pipeline:
+1. Linear Regression  
+2. Polynomial Regression (Degree = 3) using a pipeline that included:
    - Imputer  
    - PolynomialFeatures  
    - StandardScaler  
    - LinearRegression  
 
 **Data Split:**  
-- 80% training / 20% testing (`train_test_split`)
+- 80% training / 20% testing using `train_test_split`.
 
 ---
 
 ## **7. Evaluation Metrics**
-Evaluated the models using:
+Models were evaluated using:
 - **R²**
-- **MAE** (Mean Absolute Error)
-- **RMSE** (Root Mean Squared Error)
+- **MAE (Mean Absolute Error)**
+- **RMSE (Root Mean Squared Error)**
 
-**Why these metrics:**  
-They are standard for regression and show both error magnitude and how much variance the model explains.
+These metrics help measure accuracy, error size, and how much variance the model explains.
 
 ---
 
 ## **8. Model Performance Summary**
 **Linear Regression:**  
-- Performed reasonably well but struggled with very high charges.
+- Performed reasonably well but struggled with extreme high charges.
 
 **Polynomial Regression (Degree 3):**  
 - Higher R²  
 - Lower MAE and RMSE  
-- Captured nonlinear relationships more effectively.
+- Captured nonlinear patterns more effectively  
 
 **Conclusion:**  
-Polynomial regression provided the best performance for this dataset.
+Polynomial regression produced the strongest performance for this dataset.
 
 ---
 
 ## **9. Key Challenges**
-- Managing extreme high-cost outliers that impacted model error.
-- Ensuring smoker values were properly encoded before training.
+- Handling the extreme outliers in the `charges` variable.  
+- Making sure categorical values (especially smoker status) were encoded correctly.  
 - Understanding how scaling affects polynomial models.
 
 ---
 
 ## **10. Insights & Real-World Impact**
-- Smoking status was the strongest cost driver.  
-- BMI and age also meaningfully increase predicted medical costs.  
-- Nonlinear relationships between variables make simple linear models less effective.
+- Smoking status was the strongest predictor of high medical charges.  
+- BMI and age also had meaningful impacts on predicted costs.  
+- The dataset showed nonlinear relationships, which made more complex models perform better.
 
 ---
 
 ## **11. Future Improvements**
-If more time were available, I would explore:
+If I had more time, I would try:
 - Random Forest or Gradient Boosting models  
-- Ridge/Lasso regularization  
-- Creating interaction features (e.g., BMI × smoker status)  
-- Log-transforming the target variable to handle skew
+- Regularization techniques like Ridge or Lasso  
+- Interaction features (e.g., BMI × smoker)  
 
 ---
 
 ## **12. Final Reflection**
-This project helped reinforce the full machine-learning workflow:
-- Inspecting and cleaning data  
-- Understanding relationships through visualizations  
-- Selecting meaningful features  
-- Applying pipelines  
-- Comparing models with structured metrics  
-  
-Overall, this project helped me understand the full regression workflow. I learned how scaling and polynomial features affect a model, and I gained confidence working through errors and analysis challenges.
+This project helped me walk through an entire regression workflow—importing data, exploring patterns, selecting features, building pipelines, and comparing models. I learned how scaling and polynomial features can change model performance and how to evaluate results using multiple metrics. I’m most proud of pushing through challenges, fixing errors, and completing the full analysis successfully.
 
 ---
