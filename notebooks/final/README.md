@@ -1,4 +1,5 @@
 # Regression Modeling of Medical Insurance Costs
+# README.md
 
 ## Introduction
 This project analyzes the Medical Costs dataset to understand how demographic and health factors influence individual insurance charges. Using regression modeling techniques, this analysis explores how variables such as **age**, **BMI**, and **smoking status** contribute to medical cost prediction.  
@@ -97,3 +98,5 @@ The project demonstrates how regression supports **forecasting**, **population h
 ```python
 X = df[["age", "bmi", "smoker_num"]]
 y = df["charges"]
+
+Instructions on how to set up your virtual environment and run your notebook locally.
